@@ -140,6 +140,11 @@ export default function Hero() {
                 preload="auto"
                 className="w-full h-full object-cover object-center"
               />
+              <img
+                src="/images/hero-dog.jpg"
+                alt="Ухоженная собака"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
               {/* Subtle overlay gradient at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#2C1A0E]/40 to-transparent" />
 
