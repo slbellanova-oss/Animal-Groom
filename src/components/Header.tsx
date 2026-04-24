@@ -29,16 +29,24 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {["Услуги", "Галерея", "О нас", "Контакты"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm text-[#555555] hover:text-[#C98A4B] transition-colors duration-200 font-medium tracking-wide"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              {item}
-            </a>
-          ))}
+          {["Услуги", "Галерея", "О нас", "Контакты"].map((item) => {
+            const anchorMap: Record<string, string> = {
+              "Услуги": "услуги",
+              "Галерея": "галерея",
+              "О нас": "о нас",
+              "Контакты": "контакты"
+            };
+            return (
+              <a
+                key={item}
+                href={`#${anchorMap[item]}`}
+                className="text-sm text-[#555555] hover:text-[#C98A4B] transition-colors duration-200 font-medium tracking-wide"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                {item}
+              </a>
+            );
+          })}
         </nav>
 
         {/* Contact */}
@@ -92,16 +100,24 @@ export default function Header() {
         className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-80" : "max-h-0"}`}
       >
         <div className="px-6 pb-6 flex flex-col gap-4 border-t border-[#C98A4B]/10">
-          {["Услуги", "Галерея", "О нас", "Контакты"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm text-[#555555] hover:text-[#C98A4B] transition-colors py-1"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
+          {["Услуги", "Галерея", "О нас", "Контакты"].map((item) => {
+            const anchorMap: Record<string, string> = {
+              "Услуги": "услуги",
+              "Галерея": "галерея",
+              "О нас": "о нас",
+              "Контакты": "контакты"
+            };
+            return (
+              <a
+                key={item}
+                href={`#${anchorMap[item]}`}
+                className="text-sm text-[#555555] hover:text-[#C98A4B] transition-colors py-1"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item}
+              </a>
+            );
+          })}
           <a
             href="tel:+79827088499"
             className="flex items-center gap-2 text-[#333333] font-medium text-sm"
