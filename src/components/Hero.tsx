@@ -131,10 +131,18 @@ export default function Hero() {
 
             {/* Main image */}
             <div className="relative w-[320px] h-[420px] sm:w-[380px] sm:h-[500px] lg:w-[420px] lg:h-[550px] rounded-[50px] overflow-hidden shadow-2xl shadow-[#C98A4B]/20">
+              <video
+                src="/images/hero-dog.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
               <img
                 src="/images/hero-dog.jpg"
                 alt="Ухоженная собака в салоне Animal Groom"
-                className="w-full h-full object-cover object-center"
+                className="absolute inset-0 w-full h-full object-cover"
               />
               {/* Subtle overlay gradient at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#2C1A0E]/40 to-transparent" />
