@@ -137,13 +137,15 @@ export default function Hero() {
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-full object-cover"
               />
               <img
                 src="/images/hero-dog.jpg"
                 alt="Ухоженная собака в салоне Animal Groom"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-full object-cover"
               />
+              {/* Subtle overlay gradient at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#2C1A0E]/40 to-transparent" />
               {/* Subtle overlay gradient at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#2C1A0E]/40 to-transparent" />
 
