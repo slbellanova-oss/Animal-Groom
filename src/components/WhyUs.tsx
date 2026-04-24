@@ -27,7 +27,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-24 bg-[#F5EDE0]/40 relative overflow-hidden">
+    <section id="о нас" className="py-24 bg-[#F5EDE0]/40 relative overflow-hidden">
       {/* Decorative line */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-[#C98A4B]/30 to-transparent" />
 
