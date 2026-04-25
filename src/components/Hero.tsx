@@ -132,15 +132,18 @@ export default function Hero() {
             {/* Main image */}
             <div className="relative w-[320px] h-[420px] sm:w-[380px] sm:h-[500px] lg:w-[420px] lg:h-[550px] rounded-[50px] overflow-hidden shadow-2xl shadow-[#C98A4B]/20">
               <video
-                src="/images/hero-dog.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                webkit-playsinline=""
+                preload="auto"
                 className="w-full h-full object-cover"
                 poster="/images/hero-dog.jpg"
-              />
+              >
+                <source src="/images/hero-dog-mobile.webm" type="video/webm" media="(max-width: 768px)" />
+                <source src="/images/hero-dog-mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
+                <source src="/images/hero-dog.mp4" type="video/mp4" />
+              </video>
               {/* Subtle overlay gradient at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#2C1A0E]/40 to-transparent" />
 
