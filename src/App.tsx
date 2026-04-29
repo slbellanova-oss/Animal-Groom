@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./components/Header";
@@ -11,7 +11,20 @@ import Footer from "./components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
+function PawIcon() {
+  return (
+    <img src="/images/doglapka.svg" alt="paw" className="w-6 h-6" />
+  );
+}
+
 export default function App() {
+  const [showCookie, setShowCookie] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowCookie(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     
@@ -74,6 +87,41 @@ export default function App() {
         <Booking />
       </main>
       <Footer />
+
+      {/* Cookie Banner */}
+      {showCookie && (
+        <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:w-[400px] bg-[#333333] rounded-2xl p-5 shadow-2xl z-50 animate-in slide-in-from-bottom-4 fade-in duration-500">
+          <div className="flex items-start gap-4">
+            <div className="text-[#C98A4B] flex-shrink-0 mt-0.5">
+              <PawIcon />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-white font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Мы используем куки
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Чтобы улучшить ваш опыт, мы собираем данные о посещении сайта. Это помогает нам делать сайт лучше.
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowCookie(false)}
+                  className="flex-1 py-2.5 bg-[#C98A4B] text-white text-sm font-semibold rounded-xl hover:bg-[#b07840] transition-colors"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Принять
+                </button>
+                <button
+                  onClick={() => setShowCookie(false)}
+                  className="flex-1 py-2.5 border border-white/20 text-white/70 text-sm font-medium rounded-xl hover:bg-white/10 transition-colors"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Отклонить
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
