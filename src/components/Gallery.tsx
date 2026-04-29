@@ -40,7 +40,7 @@ export default function Gallery() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C98A4B]/10 border border-[#C98A4B]/20 mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C98A4B]" />
+            <span className="w-2 h-2 rounded-full bg-[#4CAF50] animate-pulse" />
             <span
               className="text-xs font-semibold text-[#C98A4B] tracking-widest uppercase"
               style={{ fontFamily: "'Inter', sans-serif" }}

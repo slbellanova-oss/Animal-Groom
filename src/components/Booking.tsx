@@ -19,7 +19,7 @@ export default function Booking() {
 
               <div className="relative">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C98A4B]/20 border border-[#C98A4B]/30 mb-6">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C98A4B] animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF50] animate-pulse" />
                   <span
                     className="text-xs font-semibold text-[#C98A4B] tracking-widest uppercase"
                     style={{ fontFamily: "'Inter', sans-serif" }}
@@ -50,19 +50,19 @@ export default function Booking() {
                     {
                       icon: "📞",
                       label: "Телефон",
-                      value: "+7 (982) 708-84-99",
-                      href: "tel:+79827088499",
+                      value: "+7 (996) 189-71-28",
+                      href: "tel:+79961897128",
                     },
                     {
                       icon: "💬",
                       label: "WhatsApp",
                       value: "Написать в WhatsApp",
-                      href: "https://wa.me/79827088499",
+                      href: "https://wa.me/79961897128",
                     },
                     {
                       icon: "🕐",
                       label: "Режим работы",
-                      value: "Пн–Вс: 9:00 – 20:00",
+                      value: "Пн–Вс: 10:00 – 20:00",
                       href: null,
                     },
                   ].map((item) => (

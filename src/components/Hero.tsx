@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="flex flex-col items-start">
           {/* Badge */}
           <div className="flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-[#C98A4B]/10 border border-[#C98A4B]/20">
-            <span className="w-2 h-2 rounded-full bg-[#C98A4B] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#4CAF50] animate-pulse" />
             <span
               className="text-xs font-semibold text-[#C98A4B] tracking-widest uppercase"
               style={{ fontFamily: "'Inter', sans-serif" }}
@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="flex gap-8 mb-10">
             {[
               { value: "1000+", label: "Довольных питомцев" },
-              { value: "более 10 лет", label: "Опыта работы" },
+              { value: "более 1 года", label: "Опыта работы" },
               { value: "100%", label: "Безопасность" },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
@@ -91,7 +91,7 @@ export default function Hero() {
               </span>
             </a>
             <a
-              href="tel:+79827088499"
+              href="tel:+79961897128"
               className="inline-flex items-center gap-2 px-8 py-4 border border-[#C98A4B]/30 text-[#333333] font-medium rounded-full hover:border-[#C98A4B] hover:text-[#C98A4B] transition-all duration-300"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
@@ -196,7 +196,7 @@ export default function Hero() {
                   className="text-sm font-bold text-[#333]"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  10+ лет
+                  1+ год
                 </p>
               </div>
             </div>
