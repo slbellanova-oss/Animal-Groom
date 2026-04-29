@@ -1,26 +1,24 @@
 import { useState } from "react";
 
 const galleryItems = [
-  {
-    img: "/images/before-after-2.jpg",
-    dog: "Пудель",
-    label: "Модельная стрижка",
-  },
-  {
-    img: "/images/before-after-3.jpg",
-    dog: "Ши-тцу",
-    label: "Авторская стрижка",
-  },
-  {
-    img: "/images/grooming-salon.jpg",
-    dog: "Наш салон",
-    label: "Профессиональный уход",
-  },
+  { img: "/images/image grum1.jpg", dog: "Бернский зенненхунд", label: "Гигиенический груминг" },
+  { img: "/images/image grum2.jpg", dog: "Сиамский кот", label: "Модельная стрижка" },
+  { img: "/images/image grum3.jpg", dog: "Самоед", label: "Тримминг" },
+  { img: "/images/image grum4.jpg", dog: "Померанский шпиц", label: "Стрижка машинкой" },
+  { img: "/images/image grum5.jpg", dog: "Кот", label: "Купание и сушка" },
+  { img: "/images/image grum6.jpg", dog: "Вельш-корги", label: "Тримминг" },
+  { img: "/images/image grum7.jpg", dog: "Бельгийская овчарка", label: "Стрижка когтей" },
+  { img: "/images/image grum8.jpg", dog: "Американская акита", label: "Уход за шерстью" },
+  { img: "/images/image grum9.jpg", dog: "Английские кокер-спаниели", label: "Комплексный уход" },
+  { img: "/images/image grum10.jpg", dog: "В работе", label: "Авторская стрижка" },
 ];
+
+const ITEMS_PER_PAGE = 4;
 
 export default function Gallery() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
   const goTo = (index: number) => {
     if (isAnimating || index === activeIndex) return;
@@ -33,6 +31,13 @@ export default function Gallery() {
 
   const prev = () => goTo((activeIndex - 1 + galleryItems.length) % galleryItems.length);
   const next = () => goTo((activeIndex + 1) % galleryItems.length);
+
+  const visibleItems = galleryItems.slice(0, visibleCount);
+  const showMore = () => setVisibleCount(prev => Math.min(prev + ITEMS_PER_PAGE, galleryItems.length));
+  const showLess = () => {
+    setVisibleCount(ITEMS_PER_PAGE);
+    setActiveIndex(0);
+  };
 
   return (
     <section id="галерея" className="py-24 bg-white">
@@ -67,7 +72,7 @@ export default function Gallery() {
         {/* Main Slider */}
         <div className="relative">
           {/* Main featured image */}
-          <div className="relative rounded-3xl overflow-hidden bg-[#F5EDE0] aspect-[16/9] max-h-[520px] shadow-2xl shadow-[#C98A4B]/10 mb-6" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div className="relative rounded-3xl overflow-hidden bg-[#F5EDE0] aspect-[16/9] max-h-[520px] shadow-2xl shadow-[#C98A4B]/10" style={{ maxWidth: '900px', margin: '0 auto' }}>
             <div className="absolute inset-0 flex items-center justify-center">
               <img
                 src={galleryItems[activeIndex].img}
@@ -126,33 +131,60 @@ export default function Gallery() {
             </button>
           </div>
 
-          {/* Thumbnail row */}
-          <div className="grid grid-cols-4 gap-3 mt-6">
-            {galleryItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => goTo(index)}
-                className={`relative rounded-2xl overflow-hidden aspect-[4/3] transition-all duration-300 ${
-                  activeIndex === index
-                    ? "ring-3 ring-[#C98A4B] ring-offset-2 scale-[1.02] shadow-lg"
-                    : "opacity-60 hover:opacity-90 hover:scale-[1.01]"
-                }`}
-              >
-                <img
-                  src={item.img}
-                  alt={item.dog}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/50 to-transparent">
-                  <p
-                    className="text-white text-[10px] font-medium truncate"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
-                    {item.dog}
-                  </p>
-                </div>
-              </button>
-            ))}
+          {/* Thumbnail grid */}
+          <div className="relative mt-8">
+            <div className="grid grid-cols-4 gap-4">
+              {visibleItems.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => goTo(index)}
+                  className={`relative rounded-2xl overflow-hidden aspect-[4/3] transition-all duration-300 ${
+                    activeIndex === index
+                      ? "ring-3 ring-[#C98A4B] ring-offset-2 scale-[1.02] shadow-lg"
+                      : "opacity-60 hover:opacity-90 hover:scale-[1.01]"
+                  }`}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.dog}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/50 to-transparent">
+                    <p
+                      className="text-white text-[10px] font-medium truncate"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
+                      {item.dog}
+                    </p>
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            {/* Show more / Show less button */}
+            {visibleCount < galleryItems.length && (
+              <div className="flex justify-center mt-4">
+                <button
+                  onClick={showMore}
+                  className="px-6 py-2 bg-[#C98A4B] text-white text-sm font-semibold rounded-full hover:bg-[#b07840] transition-all duration-300"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Показать ещё ({galleryItems.length - visibleCount})
+                </button>
+              </div>
+            )}
+            
+            {visibleCount > ITEMS_PER_PAGE && (
+              <div className="flex justify-center mt-4">
+                <button
+                  onClick={showLess}
+                  className="px-6 py-2 border-2 border-[#C98A4B] text-[#C98A4B] text-sm font-semibold rounded-full hover:bg-[#C98A4B] hover:text-white transition-all duration-300"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Свернуть
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Dot indicators (mobile) */}

@@ -73,30 +73,6 @@ const services = [
       price: "от 3000 ₽",
     },
   },
-  {
-    emoji: "🏠",
-    icon: <TrophyIcon />,
-    title: "Хэндлинг-рум",
-    description:
-      "Специальная подготовка собак к выставкам: постановка стойки, работа в ринге, финальный груминг для шоу.",
-    color: "#EDF7ED",
-    accent: "#4CAF50",
-    tag: "Эксклюзив",
-    details: {
-      steps: [
-        "Теоретическая часть: правила поведения в ринге",
-        "Постановка стойки на столе и на полу",
-        "Отработка движения по кругу и по прямой",
-        "Работа с поводком (ринговка)",
-        "Обучение показа зубов и экспертной оценки",
-        "Выставочный груминг: финальная подготовка шерсти",
-        "Управление стрессом собаки в условиях выставки",
-        "Разбор типичных ошибок и рекомендации",
-      ],
-      duration: "1,5–2 часа",
-      price: "от 2000 ₽",
-    },
-  },
 ];
 
 export default function Services() {
@@ -136,7 +112,7 @@ export default function Services() {
           </div>
 
           {/* Service Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {services.map((service, index) => (
               <ServiceCard 
                 key={index} 
@@ -373,19 +349,6 @@ function StripIcon() {
       <path d="M10 16c-2 0-3-2-2-4" />
       <path d="M6 12c-1-2 0-4 2-3" />
       <path d="M8 6c1-1 3 0 4 2" />
-    </svg>
-  );
-}
-
-function TrophyIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-      <path d="M4 22h16"/>
-      <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/>
-      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/>
-      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
     </svg>
   );
 }

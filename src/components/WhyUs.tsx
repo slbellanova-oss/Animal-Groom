@@ -37,9 +37,9 @@ export default function WhyUs() {
           <div className="relative hidden lg:flex items-center justify-center">
             <div className="relative w-full max-w-md">
               {/* Large image */}
-              <div className="rounded-3xl overflow-hidden shadow-2xl shadow-[#C98A4B]/15 aspect-[4/3]">
+              <div className="rounded-3xl overflow-hidden shadow-2xl shadow-[#C98A4B]/15 aspect-[3/4]">
                 <img
-                  src="/images/grooming-salon.jpg"
+                  src="/images/image grum5.jpg"
                   alt="Наш салон груминга"
                   className="w-full h-full object-cover"
                 />
