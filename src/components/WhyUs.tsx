@@ -82,7 +82,7 @@ export default function WhyUs() {
                     className="text-white/50 text-xs"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    за 10 лет работы
+                    за 1 год работы
                   </p>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default function WhyUs() {
             <div className="mt-8 pt-8 border-t border-[#E8DDD0] grid grid-cols-3 gap-4">
               {[
                 { num: "1000+", label: "Клиентов" },
-                { num: "10 лет", label: "На рынке" },
+                { num: "1 год", label: "На рынке" },
                 { num: "100%", label: "Гарантия" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
