@@ -91,7 +91,7 @@ export default function Hero() {
               </span>
             </a>
             <a
-              href="tel:+79961897128"
+              href="tel:+0000000000"
               className="inline-flex items-center gap-2 px-8 py-4 border border-[#C98A4B]/30 text-[#333333] font-medium rounded-full hover:border-[#C98A4B] hover:text-[#C98A4B] transition-all duration-300"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >

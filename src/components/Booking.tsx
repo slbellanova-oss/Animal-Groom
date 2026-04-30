@@ -50,14 +50,14 @@ export default function Booking() {
                     {
                       icon: "📞",
                       label: "Телефон",
-                      value: "+7 (996) 189-71-28",
-                      href: "tel:+79961897128",
+                      value: "+7 (000) 000-00-00",
+                      href: "tel:+0000000000",
                     },
                     {
                       icon: "💬",
                       label: "WhatsApp",
                       value: "Написать в WhatsApp",
-                      href: "https://wa.me/79961897128",
+                      href: "https://wa.me/0000000000",
                     },
                     {
                       icon: "🕐",

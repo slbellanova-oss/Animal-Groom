@@ -19,10 +19,10 @@ export default function Footer() {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-xl font-bold tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Студия
+                  Ваше
                 </span>
                 <span className="text-[10px] font-medium text-[#C98A4B] tracking-[0.3em] uppercase -mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  груминга
+                  название
                 </span>
               </div>
             </div>
@@ -34,7 +34,7 @@ export default function Footer() {
             {/* Social links */}
             <div className="flex gap-3">
               <a
-                href="https://wa.me/79961897128"
+                href="https://wa.me/0000000000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-110"
@@ -45,9 +45,6 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://t.me/animalgroom"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#2AABEE]/15 hover:bg-[#2AABEE] text-[#2AABEE] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-110"
                 aria-label="Telegram"
               >
@@ -56,9 +53,6 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://vk.com/animalgroom"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#4C75A3]/15 hover:bg-[#4C75A3] text-[#4C75A3] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-110"
                 aria-label="ВКонтакте"
               >
@@ -134,8 +128,8 @@ export default function Footer() {
                 </span>
                 <div>
                   <p className="text-[10px] text-white/30 uppercase tracking-wider mb-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>Телефон</p>
-                  <a href="tel:+79961897128" className="text-white text-sm hover:text-[#C98A4B] transition-colors font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    +7 (996) 189-71-28
+                  <a href="tel:+0000000000" className="text-white text-sm hover:text-[#C98A4B] transition-colors font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    +7 (000) 000-00-00
                   </a>
                 </div>
               </div>
@@ -149,7 +143,7 @@ export default function Footer() {
                 </span>
                 <div>
                   <p className="text-[10px] text-white/30 uppercase tracking-wider mb-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>Адрес</p>
-                  <p className="text-white text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>Свердловская обл., г. Сысерть, мкр. Каменный Цветок, д. 1, 1 этаж</p>
+                  <p className="text-white text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>Ваш адрес</p>
                 </div>
               </div>
 
@@ -170,7 +164,7 @@ export default function Footer() {
               {/* Messenger buttons */}
               <div className="pt-2 flex gap-2">
                 <a
-                  href="https://wa.me/79961897128"
+                  href="https://wa.me/0000000000"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-center py-2 text-xs font-semibold rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] transition-colors"
@@ -179,9 +173,6 @@ export default function Footer() {
                   WhatsApp
                 </a>
                 <a
-                  href="https://t.me/animalgroom"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="flex-1 text-center py-2 text-xs font-semibold rounded-xl bg-[#2AABEE]/15 hover:bg-[#2AABEE]/25 text-[#2AABEE] transition-colors"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
@@ -195,7 +186,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
           <p className="text-white/30 text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>
-            © 2026 Студия груминга. Все права защищены.
+            © 2026 Ваше название. Все права защищены.
           </p>
           <div className="flex gap-6">
             {["Политика конфиденциальности", "Оферта"].map((link) => (

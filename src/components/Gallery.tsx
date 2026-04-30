@@ -5,12 +5,10 @@ const galleryItems = [
   { img: "/images/image grum2.jpg", dog: "Сиамский кот", label: "Модельная стрижка" },
   { img: "/images/image grum3.jpg", dog: "Самоед", label: "Тримминг" },
   { img: "/images/image grum4.jpg", dog: "Померанский шпиц", label: "Стрижка машинкой" },
-  { img: "/images/image grum5.jpg", dog: "Кот", label: "Купание и сушка" },
-  { img: "/images/image grum6.jpg", dog: "Вельш-корги", label: "Тримминг" },
+  { img: "/images/image grum6.jpg", dog: "Вельш-корги", label: "Подготовка к выставке" },
   { img: "/images/image grum7.jpg", dog: "Бельгийская овчарка", label: "Стрижка когтей" },
   { img: "/images/image grum8.jpg", dog: "Американская акита", label: "Уход за шерстью" },
   { img: "/images/image grum9.jpg", dog: "Английские кокер-спаниели", label: "Комплексный уход" },
-  { img: "/images/image grum10.jpg", dog: "В работе", label: "Авторская стрижка" },
 ];
 
 const ITEMS_PER_PAGE = 4;

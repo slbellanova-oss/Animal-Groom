@@ -39,7 +39,7 @@ export default function WhyUs() {
               {/* Large image */}
               <div className="rounded-3xl overflow-hidden shadow-2xl shadow-[#C98A4B]/15 aspect-[3/4]">
                 <img
-                  src="/images/image grum5.jpg"
+                  src="/images/grooming-salon.jpg"
                   alt="Наш салон груминга"
                   className="w-full h-full object-cover"
                 />

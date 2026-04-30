@@ -16,13 +16,13 @@ export default function Header() {
               className="text-xl font-bold text-[#333333] tracking-wide"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Студия
+              Ваше
             </span>
             <span
               className="text-[11px] font-medium text-[#C98A4B] tracking-[0.3em] uppercase -mt-1"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              груминга
+              название
             </span>
           </div>
         </a>
@@ -52,15 +52,15 @@ export default function Header() {
         {/* Contact */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="tel:+79961897128"
+            href="tel:+0000000000"
             className="flex items-center gap-2 text-[#333333] hover:text-[#C98A4B] transition-colors duration-200 font-medium text-sm"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <PhoneIcon />
-            +7 (996) 189-71-28
+            +7 (000) 000-00-00
           </a>
           <a
-            href="https://wa.me/79961897128"
+            href="https://wa.me/0000000000"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-9 h-9 rounded-full bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] transition-all duration-200 hover:scale-110"
@@ -119,15 +119,15 @@ export default function Header() {
             );
           })}
           <a
-            href="tel:+79961897128"
+            href="tel:+0000000000"
             className="flex items-center gap-2 text-[#333333] font-medium text-sm"
           >
             <PhoneIcon />
-            +7 (996) 189-71-28
+            +7 (000) 000-00-00
           </a>
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/79961897128"
+              href="https://wa.me/0000000000"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#25D366] font-medium text-sm"
